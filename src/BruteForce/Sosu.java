@@ -7,14 +7,7 @@ public class Sosu {
     public void recursive(String comb, String others) {
         if(!comb.equals(""))
             numberSet.add(Integer.valueOf(comb));
-
-        System.out.println("처음"+comb);
-
-
         for (int i=0; i<others.length();i++) {
-            System.out.println("comb= "+comb);
-            System.out.println("다음1= "+others.substring(0,i));
-            System.out.println("다음2= "+others.substring(i+1));
             recursive(comb + others.charAt(i), others.substring(0,i) + others.substring(i+1));
         }
     }
